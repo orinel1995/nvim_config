@@ -1,6 +1,12 @@
-local fterm = require("FTerm")
-
-_G.htop = fterm:new({
-	ft = 'fterm_htop',
-	cmd = "htop"
-})
+return {
+  "numtostr/fterm.nvim",
+  keys = {
+    {
+      "<leader>z",
+      function()
+        require("FTerm").toggle()
+      end,
+      desc = "Toggle terminal",
+    },
+  },
+}
