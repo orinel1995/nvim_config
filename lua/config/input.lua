@@ -28,7 +28,7 @@ if vim.g.vscode then
   return
 end
 
-vim.api.nvim_create_autocmd({ "InsertLeave", "CmdlineLeave" }, {
+vim.api.nvim_create_autocmd({ "FocusGained", "InsertLeave", "CmdlineLeave" }, {
   callback = switch_to_english_layout,
 })
 

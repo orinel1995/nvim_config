@@ -3,8 +3,17 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
+    transparent = true,
     commentstyle = { italic = false },
-    colors = { theme = { comment = "#ff9e3b" } },
+    colors = {
+      theme = {
+        all = {
+          ui = {
+            bg_gutter = "none",
+          },
+        },
+      },
+    },
     overrides = function(colors)
       return {
         ["@variable"] = { fg = colors.palette.fujiwhite },

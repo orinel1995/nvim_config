@@ -18,6 +18,7 @@ vim.g.maplocalleader = " "
 require("config.options")
 require("config.keymaps")
 require("config.input")
+require("config.mode-colors")
 require("config.vscode")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
