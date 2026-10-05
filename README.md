@@ -41,6 +41,17 @@ export IM_SELECT_PATH=/c/im-select/im-select.exe
 
 Встроенный терминал использует `bash.exe`; Git for Windows уже предоставляет его.
 
+### Очистка экрана после выхода из Neovim
+
+Если Windows Terminal оставляет след интерфейса Neovim после `:q`, добавьте wrapper в `~/.bashrc`:
+
+```bash
+printf '\nnvim() {\n  command nvim "$@"\n  tput rmcup\n}\n' >> ~/.bashrc
+source ~/.bashrc
+```
+
+`tput rmcup` выполняется уже после завершения Neovim и возвращает основной экран Bash, не очищая историю терминала.
+
 ## Bash на Ubuntu
 
 ```bash

@@ -11,6 +11,7 @@ local options = {
 	backup = false,
 	undofile = true, --undos are saved to file
 	cursorline = true, --highlight line
+	scrolloff = 5, --keep the cursor away from the top and bottom edge
 	ttyfast = true, --faster scrolling
 	smoothscroll = true,
 	title = true, --automatic window titlebar
