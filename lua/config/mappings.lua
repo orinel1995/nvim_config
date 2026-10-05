@@ -9,6 +9,12 @@ map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<leader>p", function()
+  local text = vim.fn.getreg("+")
+  text = text:gsub("\r\n", "\n"):gsub("\r", "\n")
+  vim.api.nvim_put(vim.split(text, "\n", { plain = true }), "c", true, true)
+end, { desc = "Paste clipboard without CRLF" })
+
 -- buffers
 map("n", "<S-l>", ":bnext<CR>")
 map("n", "<S-h>", ":bprevious<CR>")

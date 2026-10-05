@@ -39,6 +39,9 @@ local options = {
 	splitkeep = 'screen', --stablizie window open/close
 }
 
+vim.opt.fileformats = { "unix", "dos" }
+vim.opt.fileformat = "unix"
+
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
