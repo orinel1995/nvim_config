@@ -9,3 +9,10 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Focus right split" })
 
 vim.keymap.set("n", "<leader>h", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<leader>l", "<Cmd>bnext<CR>", { desc = "Next buffer" })
+
+vim.keymap.set("n", "go", function()
+  local path = vim.fn.expand("<cfile>")
+  if path ~= "" then
+    vim.cmd.edit(vim.fn.fnameescape(path))
+  end
+end, { desc = "Open file under cursor" })

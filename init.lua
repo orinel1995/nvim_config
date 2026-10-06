@@ -18,6 +18,7 @@ vim.g.maplocalleader = " "
 require("config.options")
 require("config.keymaps")
 require("config.input")
+require("config.json")
 require("config.mode-colors")
 require("config.terminal")
 require("config.vscode")
